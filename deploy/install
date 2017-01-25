@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Set default start/boot
+#-----------------------
+
+logger -p local6.notice -t installer "app-kimchi-core - enabling Kimchi server"
+chkconfig wokd on >/dev/null 2>&1
+
+logger -p local6.notice -t installer "app-kimchi-core - starting Kimchi server"
+service wokd start >/dev/null 2>&1
