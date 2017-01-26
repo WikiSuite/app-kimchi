@@ -5,7 +5,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 $app['basename'] = 'kimchi';
-$app['version'] = '1.1.1';
+$app['version'] = '1.1.2';
 $app['release'] = '1';
 $app['vendor'] = 'Marc Laporte';
 $app['packager'] = 'eGloo';
