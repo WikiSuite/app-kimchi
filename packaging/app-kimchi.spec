@@ -1,7 +1,7 @@
 
 Name: app-kimchi
 Epoch: 1
-Version: 1.1.2
+Version: 1.1.3
 Release: 1%{dist}
 Summary: Kimchi
 License: GPLv3
@@ -78,6 +78,7 @@ exit 0
 %files core
 %defattr(-,root,root)
 %exclude /usr/clearos/apps/kimchi/packaging
+%exclude /usr/clearos/apps/kimchi/unify.json
 %dir /usr/clearos/apps/kimchi
 %dir /var/clearos/kimchi
 %dir /var/clearos/kimchi/backup
