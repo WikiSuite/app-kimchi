@@ -14,7 +14,7 @@ Requires: %{name}-core = 1:%{version}-%{release}
 Requires: app-base
 
 %description
-Kimchi is an HTML5 based management tool for KVM. It is designed to make it as easy as possible to get started with KVM.
+Kimchi is an HTML5 based management tool for KVM. It is designed to make it as easy as possible to get started with KVM virtualization.
 
 %package core
 Summary: Kimchi - Core
@@ -26,7 +26,7 @@ Requires: app-base >= 1:2.3.7
 Requires: app-nginx-core
 
 %description core
-Kimchi is an HTML5 based management tool for KVM. It is designed to make it as easy as possible to get started with KVM.
+Kimchi is an HTML5 based management tool for KVM. It is designed to make it as easy as possible to get started with KVM virtualization.
 
 This package provides the core API and libraries.
 
