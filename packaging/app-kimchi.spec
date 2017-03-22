@@ -1,13 +1,13 @@
 
 Name: app-kimchi
 Epoch: 1
-Version: 1.1.3
+Version: 1.1.4
 Release: 1%{dist}
 Summary: Kimchi
 License: GPLv3
 Group: ClearOS/Apps
 Packager: eGloo
-Vendor: Marc Laporte
+Vendor: WikiSuite
 Source: %{name}-%{version}.tar.gz
 Buildarch: noarch
 Requires: %{name}-core = 1:%{version}-%{release}
