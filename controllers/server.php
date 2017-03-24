@@ -80,11 +80,13 @@ class Server extends Daemon
 
         $this->load->library('nginx/NGINX');
         $this->load->library('kimchi/Wok');
+        $this->load->library('base/Daemon', 'libvirtd');
 
         $nginx_running = $this->nginx->get_running_state();
         $wok_running = $this->wok->get_running_state();
+        $libvirt_running = $this->daemon->get_running_state();
 
-        $status['status'] = ($nginx_running && $wok_running) ? Daemon_Class::STATUS_RUNNING : Daemon_Class::STATUS_STOPPED;
+        $status['status'] = ($nginx_running && $wok_running && $libvirt_running) ? Daemon_Class::STATUS_RUNNING : Daemon_Class::STATUS_STOPPED;
 
         echo json_encode($status);
     }
@@ -99,12 +101,60 @@ class Server extends Daemon
     {
         $this->load->library('nginx/NGINX');
         $this->load->library('kimchi/Wok');
+        $this->load->library('base/Daemon', 'libvirtd');
+
+        try {
+            $this->daemon->set_running_state(TRUE);
+            $this->daemon->set_boot_state(TRUE);
+        } catch (Exception $e) {
+            // Keep going
+        }
 
         try {
             $this->nginx->set_running_state(TRUE);
-            $this->wok->set_running_state(TRUE);
             $this->nginx->set_boot_state(TRUE);
+        } catch (Exception $e) {
+            // Keep going
+        }
+
+        try {
+            $this->wok->set_running_state(TRUE);
             $this->wok->set_boot_state(TRUE);
+        } catch (Exception $e) {
+            // Keep going
+        }
+
+    }
+
+    /**
+     * Stop.
+     *
+     * @return view
+     */
+
+    function stop()
+    {
+        $this->load->library('nginx/NGINX');
+        $this->load->library('kimchi/Wok');
+        $this->load->library('base/Daemon', 'libvirtd');
+
+        try {
+            $this->wok->set_running_state(FALSE);
+            $this->wok->set_boot_state(FALSE);
+        } catch (Exception $e) {
+            // Keep going
+        }
+
+        try {
+            $this->nginx->set_running_state(FALSE);
+            $this->nginx->set_boot_state(FALSE);
+        } catch (Exception $e) {
+            // Keep going
+        }
+
+        try {
+            $this->daemon->set_running_state(FALSE);
+            $this->daemon->set_boot_state(FALSE);
         } catch (Exception $e) {
             // Keep going
         }
