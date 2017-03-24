@@ -99,7 +99,7 @@ class Settings extends ClearOS_Controller
         //---------------
 
         try {
-            $data['admin_url'] = 'https://' . $_SERVER['SERVER_ADDR'] . ':8001/';
+            $data['admin_url'] = 'https://' . $_SERVER['SERVER_NAME'] . ':8001/';
         } catch (Exception $e) {
             $this->page->view_exception($e);
             return;
