@@ -1,7 +1,7 @@
 
 Name: app-kimchi
 Epoch: 1
-Version: 1.1.6
+Version: 1.1.7
 Release: 1%{dist}
 Summary: Kimchi
 License: GPLv3
@@ -40,6 +40,7 @@ cp -r * %{buildroot}/usr/clearos/apps/kimchi/
 
 install -d -m 0755 %{buildroot}/var/clearos/kimchi
 install -d -m 0755 %{buildroot}/var/clearos/kimchi/backup
+install -D -m 0644 packaging/libvirtd.php %{buildroot}/var/clearos/base/daemon/libvirtd.php
 install -D -m 0644 packaging/wokd.php %{buildroot}/var/clearos/base/daemon/wokd.php
 
 %post
@@ -85,4 +86,5 @@ exit 0
 /usr/clearos/apps/kimchi/deploy
 /usr/clearos/apps/kimchi/language
 /usr/clearos/apps/kimchi/libraries
+/var/clearos/base/daemon/libvirtd.php
 /var/clearos/base/daemon/wokd.php

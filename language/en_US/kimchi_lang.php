@@ -9,3 +9,4 @@ $lang['kimchi_admin_console_not_running_help'] = 'Kimchi is not running, so acce
 $lang['kimchi_wok_description'] = 'Kimchi KVM Web Server';
 $lang['kimchi_kimchi_unavailable'] = 'Kimchi Unavailable';
 $lang['kimchi_incompatible_warning'] = 'Sorry, your CPU does not support Virtual Technology (VT) extensions.';
+$lang['kimchi_libvirt_description'] = 'Virtualization Server';

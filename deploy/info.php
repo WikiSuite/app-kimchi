@@ -5,7 +5,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 $app['basename'] = 'kimchi';
-$app['version'] = '1.1.6';
+$app['version'] = '1.1.7';
 $app['release'] = '1';
 $app['vendor'] = 'WikiSuite';
 $app['packager'] = 'eGloo';
@@ -37,7 +37,8 @@ $app['core_directory_manifest'] = array(
 );
 
 $app['core_file_manifest'] = array(
-    'wokd.php'=> array('target' => '/var/clearos/base/daemon/wokd.php')
+    'wokd.php'=> array('target' => '/var/clearos/base/daemon/wokd.php'),
+    'libvirtd.php'=> array('target' => '/var/clearos/base/daemon/libvirtd.php')
 );
 
 $app['delete_dependency'] = array(
