@@ -7,3 +7,5 @@ $lang['kimchi_admin_console_help'] = 'Follow the link to access the Kimchi Admin
 $lang['kimchi_go_to_admin_console'] = 'Go To Admin Console';
 $lang['kimchi_admin_console_not_running_help'] = 'Kimchi is not running, so access to the Admin Console is not available.';
 $lang['kimchi_wok_description'] = 'Kimchi KVM Web Server';
+$lang['kimchi_kimchi_unavailable'] = 'Kimchi Unavailable';
+$lang['kimchi_incompatible_warning'] = 'Sorry, your CPU does not support Virtual Technology (VT) extensions.';

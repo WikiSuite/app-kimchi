@@ -59,12 +59,28 @@ class Kimchi extends ClearOS_Controller
         //------------------
 
         $this->lang->load('kimchi');
+        $this->load->library('base/Stats');
+
+
+        // Load view data
+        //---------------
+
+        try {
+            $compatible = $this->stats->get_cpu_vt_state();
+        } catch (Exception $e) {
+            $this->page->view_exception($e);
+            return;
+        }
 
         // Load views
         //-----------
 
-        $views = array('kimchi/server', 'kimchi/settings');
+        if ($compatible) {
+            $views = array('kimchi/server', 'kimchi/settings');
 
-        $this->page->view_forms($views, lang('kimchi_app_name'));
+            $this->page->view_forms($views, lang('kimchi_app_name'));
+        } else {
+            $this->page->view_form('kimchi/incompatible', $data, lang('kimchi_app_name'));
+        }
     }
 }

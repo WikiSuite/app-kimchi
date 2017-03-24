@@ -5,7 +5,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 $app['basename'] = 'kimchi';
-$app['version'] = '1.1.5';
+$app['version'] = '1.1.6';
 $app['release'] = '1';
 $app['vendor'] = 'WikiSuite';
 $app['packager'] = 'eGloo';
@@ -27,7 +27,7 @@ $app['subcategory'] = lang('base_subcategory_virtualization');
 
 $app['core_requires'] = array(
     'kimchi',
-    'app-base >= 1:2.3.7',
+    'app-base >= 1:2.3.34',
     'app-nginx-core'
 );
 
