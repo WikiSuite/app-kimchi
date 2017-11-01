@@ -23,6 +23,7 @@ Group: ClearOS/Libraries
 Requires: app-base-core
 Requires: kimchi
 Requires: app-base >= 1:2.3.34
+Requires: app-network-core >= 1:2.4.0
 Requires: app-nginx-core
 
 %description core

@@ -76,7 +76,7 @@ class Kimchi extends ClearOS_Controller
         //-----------
 
         if ($compatible) {
-            $views = array('kimchi/server', 'kimchi/settings');
+            $views = array('kimchi/server', 'kimchi/network', 'kimchi/settings');
 
             $this->page->view_forms($views, lang('kimchi_app_name'));
         } else {

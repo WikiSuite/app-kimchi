@@ -28,6 +28,7 @@ $app['subcategory'] = lang('base_subcategory_virtualization');
 $app['core_requires'] = array(
     'kimchi',
     'app-base >= 1:2.3.34',
+    'app-network-core >= 1:2.4.0',
     'app-nginx-core'
 );
 
