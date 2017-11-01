@@ -12,6 +12,14 @@ $app['packager'] = 'eGloo';
 $app['license'] = 'GPLv3';
 $app['license_core'] = 'LGPLv3';
 $app['description'] = lang('kimchi_app_description');
+$app['powered_by'] = array(
+    'packages' => array(
+        'kimchi' => array(
+            'name' => 'Kimchi',
+            'version' => '---',
+        ),
+    ),
+);
 
 /////////////////////////////////////////////////////////////////////////////
 // App name and categories
