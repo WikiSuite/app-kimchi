@@ -1,7 +1,7 @@
 
 Name: app-kimchi
 Epoch: 1
-Version: 1.1.7
+Version: 1.1.8
 Release: 1%{dist}
 Summary: Kimchi
 License: GPLv3
@@ -21,7 +21,7 @@ Summary: Kimchi - Core
 License: LGPLv3
 Group: ClearOS/Libraries
 Requires: app-base-core
-Requires: kimchi
+Requires: kimchi >= 2.5.0
 Requires: app-base >= 1:2.3.34
 Requires: app-network-core >= 1:2.4.0
 Requires: app-nginx-core
