@@ -25,6 +25,7 @@ Requires: kimchi >= 2.5.0
 Requires: wok >= 2.5.0
 Requires: app-base >= 1:2.3.34
 Requires: app-network-core >= 1:2.4.0
+Requires: app-dns-core >= 1:2.6.0
 Requires: app-nginx-core
 
 %description core

@@ -38,6 +38,7 @@ $app['core_requires'] = array(
     'wok >= 2.5.0',
     'app-base >= 1:2.3.34',
     'app-network-core >= 1:2.4.0',
+    'app-dns-core >= 1:2.6.0',
     'app-nginx-core'
 );
 
