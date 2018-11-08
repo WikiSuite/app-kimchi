@@ -5,7 +5,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 $app['basename'] = 'kimchi';
-$app['version'] = '1.1.8';
+$app['version'] = '1.1.9';
 $app['release'] = '1';
 $app['vendor'] = 'WikiSuite';
 $app['packager'] = 'eGloo';
@@ -35,6 +35,7 @@ $app['subcategory'] = lang('base_subcategory_virtualization');
 
 $app['core_requires'] = array(
     'kimchi >= 2.5.0',
+    'wok >= 2.5.0',
     'app-base >= 1:2.3.34',
     'app-network-core >= 1:2.4.0',
     'app-nginx-core'
@@ -47,7 +48,11 @@ $app['core_directory_manifest'] = array(
 
 $app['core_file_manifest'] = array(
     'wokd.php'=> array('target' => '/var/clearos/base/daemon/wokd.php'),
-    'libvirtd.php'=> array('target' => '/var/clearos/base/daemon/libvirtd.php')
+    'libvirtd.php'=> array('target' => '/var/clearos/base/daemon/libvirtd.php'),
+    'accounts-event'=> array(
+        'target' => '/var/clearos/events/accounts/kimchi',
+        'mode' => '0755'
+    ),
 );
 
 $app['delete_dependency'] = array(

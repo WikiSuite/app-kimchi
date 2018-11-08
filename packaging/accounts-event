@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Make sure dhparams.pem exists - workaround for https://github.com/WikiSuite/wok/issues/1
+if [ ! -e /etc/wok/dhparams.pem ]; then
+    logger -p local6.notice -t installer "app-kimchi-core - adding wok dhparams.pem"
+    openssl dhparam -dsaparam -out /etc/wok/dhparams.pem 2048 >/dev/null 2>&1
+fi
